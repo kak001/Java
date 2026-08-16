@@ -3,21 +3,22 @@ public class Arrays {
         
         //Declaracion y creacion
 
-        int[] numbers = new int[3];
+        int[] numbers = new int[3]; // Creo int tipo Array donde contiene 3 slots
         System.out.println(numbers);
 
-        String[] names = {"Joaquin", "Torrent", "kako"};
+        String[] names = {"Joaquin", "Torrent", "kako"}; // Creo un String tipo Array donde contiene 3 Strings
         System.out.println(names);
 
-
         // Acceso
-        System.out.println(numbers[2]);
+
+        System.out.println(numbers[2]); // Accedo a la posicion del Array e imprimo el contenido
         System.out.println(names[0]);
 
-        System.out.println((new String[3])[0]);
+        System.out.println((new String[3])[0]); // Creo y Accedo a un String tipo Array imprimiendo su contenido
 
         // Modificacion
-        numbers[0] = 1;
+
+        numbers[0] = 1; // Modifico el contenido dentro del Array segun su posicion
         numbers[1] = 10;
         System.out.println(numbers[0]);
         System.out.println(numbers[1]);
@@ -37,5 +38,6 @@ public class Arrays {
 
         boolean[] booleans = new boolean[5];
         System.out.println(booleans[4]);
+        
     }
 }

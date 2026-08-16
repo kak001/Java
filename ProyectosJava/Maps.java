@@ -4,8 +4,8 @@ public class Maps {
     public static void main(String[] args) {
 
         // Declaracion y creacion
-        HashMap<String, String> names = new HashMap<>();
-        var numbers = new HashMap<Integer, String>();
+        HashMap<String, String> names = new HashMap<>(); // Forma antigua
+        var numbers = new HashMap<Integer, String>(); // Forma moderna
 
         // Tamaño
 
@@ -13,7 +13,7 @@ public class Maps {
 
         // Añadir elementos
 
-        names.put("kako", "joaco.atj06@gmail.com");
+        names.put("kako", "joaco.atj06@gmail.com"); // Añade elementos a una variable Map usando una llave-valor
         names.put("Joako", "joaco.tj206@gmail.com");
         names.put("Joaquin", "donhuevoxd2100@gmail.com");
         System.out.println(names.size());
@@ -21,15 +21,15 @@ public class Maps {
 
         // Acceder a los elementos
 
-        System.out.println(names.get("kako"));
-        System.out.println(names.get("ola"));
+        System.out.println(names.get("kako")); // Accedo al contenido segun la llave del elemento
+        System.out.println(names.get("ola")); // Si no existe la llave imprime null
 
         // Verificar elementos
         
-        System.out.println(names.containsKey("kako"));
-        System.out.println(names.containsKey("ola"));
+        System.out.println(names.containsKey("kako")); // Verifica si existe un contenido o valor segun la llave
+        System.out.println(names.containsKey("ola")); // Si no existe la llave imprime false
 
-        System.out.println(names.containsValue("joaco.atj06@gmail.com"));
+        System.out.println(names.containsValue("joaco.atj06@gmail.com")); // Verifica si existe el contenido 
 
         // Eliminar elementos
 
