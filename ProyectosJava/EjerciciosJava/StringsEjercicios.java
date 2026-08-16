@@ -1,38 +1,42 @@
 public class StringsEjercicios {
     public static void main(String[] args) {
         
-        System.out.println("Hola " + "kako"); // 1.
+        // 1.
+        System.out.println("Hola " + "kako"); 
 
+        // 2.
         String name = "kako";
+        System.out.println(name.length()); 
+        
+        // 3.
+        System.out.println(name.charAt(0));
+        System.out.println(name.charAt(name.length() - 1));
 
-        System.out.println(name.length()); // 2.
+        // 4.
+        System.out.println(name.toUpperCase()); 
+        System.out.println(name.toLowerCase()); 
 
-        System.out.println(name.charAt(0)); // 3.
-        System.out.println(name.charAt(name.length() - 1)); // 3.
-
-        System.out.println(name.toUpperCase()); // 4.
-        System.out.println(name.toLowerCase()); // 4.
-
+        // 5.
         var thing = "Hola, esto es una prueba";
+        System.out.println(thing.contains("esto"));
 
-        System.out.println(thing.contains("esto")); // 5.
-
+        // 6.
         var number = 21;
+        System.out.println(String.format("Hola esto es %d", number));
 
-        System.out.println(String.format("Hola esto es %d", number)); // 6.
-
+        // 7.
         thing = " Hola, esto es una prueba ";
+        System.out.println(thing.trim());
 
-        System.out.println(thing.trim()); // 7.
+        // 8.
+        System.out.println(thing.replace(" ", "-"));
 
-        System.out.println(thing.replace(" ", "-")); // 8.
-
+        // 9.
         var a = "chao";
-
         var b = new String("chao");
+        System.out.println(a.equals(b));
 
-        System.out.println(a.equals(b)); // 9.
-
-        System.out.println(a.length() == (b.length())); // 10.
+        // 10.
+        System.out.println(a.length() == (b.length()));
     }
 }

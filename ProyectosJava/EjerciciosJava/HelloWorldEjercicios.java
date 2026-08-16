@@ -15,7 +15,7 @@ public class HelloWorldEjercicios { //En esta linea le damos un nombre a la clas
         System.out.println("11: frase.");
         System.out.println(("12: :) | :O | x) | ._. | -.- | :p ")); //Texto tipo ASCII de caritas
 
-        //Al iniciar programa sin el metodo main se registra dos problemas, uno que se esperaba un identificador 
+        //Al iniciar el programa sin el metodo main se registra dos problemas, uno que se esperaba un identificador 
         //Y otro muestra que es un tipo de inicio ilegal
 
         /*

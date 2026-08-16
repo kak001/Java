@@ -2,7 +2,6 @@ public class ConditionalsEjercicios {
     public static void main(String[] args) {
 
         // 1.
-
         var age = 21;
 
         if (age >= 18) { 
@@ -12,7 +11,6 @@ public class ConditionalsEjercicios {
         }
 
         // 2.
-
         var numberA = 10;
         var numberB = 11;
 
@@ -25,7 +23,6 @@ public class ConditionalsEjercicios {
         }
 
         // 3.
-
         var numberC = 21;
 
         if (numberC > 0) {
@@ -37,7 +34,6 @@ public class ConditionalsEjercicios {
         }
 
         // 4.
-
         var numberD = 67;
 
         if (numberD % 2 == 0) {
@@ -47,7 +43,6 @@ public class ConditionalsEjercicios {
         }
 
         // 5.
-
         var numberE = 55;
 
         if (numberE >= 1 && numberE <= 100) {
@@ -57,7 +52,6 @@ public class ConditionalsEjercicios {
         }
 
         // 6.
-
         var day = 5;
 
         switch (day) {
@@ -88,7 +82,6 @@ public class ConditionalsEjercicios {
         }
 
         // 7.
-        
         var grade = 6.7;
 
         if (grade >= 4.0 && grade <= 7.0) {
@@ -100,7 +93,6 @@ public class ConditionalsEjercicios {
         }
 
         // 8.
-
         var companion = false;
 
         if (age >= 15 || companion == true) {
@@ -110,23 +102,22 @@ public class ConditionalsEjercicios {
         }
 
         // 9.
-
-        var letter = "j";
+        var letter = 'j';
 
         switch (letter) {
-            case "a":
+            case 'a':
                 System.out.println("Es una vocal");
                 break;
-            case "e":
+            case 'e':
                 System.out.println("Es una vocal");
                 break;
-            case "i":
+            case 'i':
                 System.out.println("Es una vocal");
                 break;
-            case "o":
+            case 'o':
                 System.out.println("Es una vocal");
                 break;
-            case "u":
+            case 'u':
                 System.out.println("Es una vocal");
                 break;
             default:
@@ -135,7 +126,6 @@ public class ConditionalsEjercicios {
         }
 
         // 10.
-
         numberA = 3;
         numberB = 4;
         numberC = 2;
