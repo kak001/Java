@@ -86,8 +86,6 @@ public class ArithmeticOperators {
         System.out.println(--b);
         System.out.println(b--);
         System.out.println(b);
-
-
-
+        
     }
 }

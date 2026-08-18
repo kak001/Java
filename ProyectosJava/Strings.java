@@ -15,8 +15,8 @@ public class Strings {
         System.out.println(name.length()); // Lee el numero de caracteres que tiene el String
 
         // Obtener caracter
-        System.out.println(name.charAt(0 ));  // Obtiene la posicion del caracter dentro del String
-        System.out.println(name.charAt(name.length() - 1)); // Obtiene la posicion del ultimo caracter del String
+        System.out.println(name.charAt(0 ));  // Obtiene un caracter del String segun la posicion indexada
+        System.out.println(name.charAt(name.length() - 1)); // Obtiene el ultimo caracter del String 
 
         // Subcadena
         System.out.println(name.substring(2)); // Define cuando empezar a typear el String segun la posicion del caracter

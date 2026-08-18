@@ -27,6 +27,5 @@ public class VariablesYConstantes {
         // EMAIL = "joaco.atj06@gmail.com"; Es constante
         System.out.println(EMAIL);
 
-
     }
 }

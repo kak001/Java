@@ -32,6 +32,11 @@ public class Conditionals {
             default:
                 System.out.println("No es lunes, martes o miercoles");
         }
+
+        // Forma alternativa if-else
+
+        String variable = (age >= 18)?"El usuario es mayor de edad":"El usuario es menor de edad"; // Forma breve de usar una condicion if-else para asignaciones simples
+        System.out.println(variable);
         
     }
 }

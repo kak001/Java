@@ -1,6 +1,0 @@
-/**
- * StringArrays
- */
-public class StringArrays {
-
-}

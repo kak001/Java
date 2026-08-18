@@ -22,5 +22,6 @@ public class DataTypes {
         System.out.println(myString);
 
         System.out.println(myString.getClass().getSimpleName());
+        
     }
 }

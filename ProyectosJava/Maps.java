@@ -21,14 +21,13 @@ public class Maps {
 
         // Acceder a los elementos
 
-        System.out.println(names.get("kako")); // Accedo al contenido segun la llave del elemento
+        System.out.println(names.get("kako")); // Accedo al contenido segun la llave
         System.out.println(names.get("ola")); // Si no existe la llave imprime null
 
         // Verificar elementos
         
-        System.out.println(names.containsKey("kako")); // Verifica si existe un contenido o valor segun la llave
+        System.out.println(names.containsKey("kako")); // Verifica si existe una llave 
         System.out.println(names.containsKey("ola")); // Si no existe la llave imprime false
-
         System.out.println(names.containsValue("joaco.atj06@gmail.com")); // Verifica si existe el contenido 
 
         // Eliminar elementos
