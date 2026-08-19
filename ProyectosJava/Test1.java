@@ -97,6 +97,5 @@ public class Test1 {
         } while (!find);
         System.out.println();
 
-        
     }
 }
