@@ -12,7 +12,7 @@ public class Student {
         } else if (score <= 59 && score >= 0) {
             System.out.println("La calificacion fue reprobada");
         } else {
-            System.out.println("Puntacion no valida");
+            System.out.println("Puntuacion no valida");
         }
     }
 }

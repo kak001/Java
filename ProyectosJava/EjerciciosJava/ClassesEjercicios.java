@@ -12,8 +12,8 @@ public class ClassesEjercicios {
         // 2.
         // Class Dog
         var dog = new Dog("Luna", 8, "Mestiza");
-        dog.DogData();
-        dog.DogBark();
+        dog.dogData();
+        dog.dogBark();
         System.out.println();
 
         // 4.

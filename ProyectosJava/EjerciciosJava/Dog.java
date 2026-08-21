@@ -10,11 +10,11 @@ public class Dog {
         this.race = race;
     }
 
-    public void DogData() {
+    public void dogData() {
         System.err.println("Nombre: " + name + ", edad: " + age + ", raza: " + race);
     }
 
-    public void DogBark () {
+    public void dogBark () {
         System.out.println("Woof!");
     }
 }
