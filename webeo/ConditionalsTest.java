@@ -56,14 +56,14 @@ public class ConditionalsTest {
         System.out.println();
 
         // 5.
-        int seasonOfTheYear = 9;
-        if (seasonOfTheYear >= 1 && seasonOfTheYear <= 3) {
+        int monthOfTheYear = 9;
+        if (monthOfTheYear == 12 && monthOfTheYear <= 2) {
             System.out.println("La estacion del año es verano");
-        } else if (seasonOfTheYear >= 4 && seasonOfTheYear <= 6) {
+        } else if (monthOfTheYear >= 3 && monthOfTheYear <= 5) {
             System.out.println("La estacion del año es otoño");
-        } else if (seasonOfTheYear >= 7 && seasonOfTheYear <= 9) {
+        } else if (monthOfTheYear >= 6 && monthOfTheYear <= 8) {
             System.out.println("La estacion del año es invierno");
-        } else if (seasonOfTheYear >= 10 && seasonOfTheYear <= 12) {
+        } else if (monthOfTheYear >= 9 && monthOfTheYear <= 11) {
             System.out.println("La estacion del año es primavera");
         } else {
             System.out.println("Numero de estacion no valido");
@@ -84,7 +84,7 @@ public class ConditionalsTest {
         // 7.
         String password = "hola12345";
 
-        boolean passwordLength = password.length() > 8;
+        boolean passwordLength = password.length() >= 8;
         boolean passwordNumber = false;
         for (char c: password.toCharArray()) {
             if (Character.isDigit(c)) {
@@ -101,11 +101,14 @@ public class ConditionalsTest {
         System.out.println();
 
         // 8.
+        // Fix
         int sideA = 2;
         int sideB = 3;
         int sideC = 5;
 
-        if (sideA == sideB && sideA == sideC &&  sideB == sideC) {
+        if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+            System.out.println("Estos lados no forman un triángulo válido");
+        } else if (sideA == sideB && sideA == sideC &&  sideB == sideC) {
             System.out.println("El tipo de triangulo segun sus mediciones es equilatero");
         } else if ((sideA == sideB) || (sideA == sideC) || (sideB == sideC)) {
             System.out.println("El tipo de triangulo segun sus mediciones es isosceles");
@@ -132,6 +135,7 @@ public class ConditionalsTest {
         }
 
         // 10.
+        // Fix
         int reward = 1;
         switch (reward) {
             case 1:
@@ -139,8 +143,10 @@ public class ConditionalsTest {
                 break;
             case 2:
                 System.out.println("Felicidades, has quedado en el podio, en segundo puesto, has ganado la medalla de plata");
+                break;
             case 3:
                 System.out.println("Felicidades, has quedado en el podio, en tercer puesto, has ganado la medalla de bronce");
+                break;
             default:
                 System.out.println("Buen intento, no has quedado en el podio pero has ganado un premio de consuelo");
                 break;
