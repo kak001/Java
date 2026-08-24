@@ -39,6 +39,7 @@ public class StructuresTest {
 
         // 3.
         // Array Bidimencional (Matriz)
+        // Fix
         int[][] matrix = {
             {1, 2, 3},
             {20, 21, 67},
@@ -47,7 +48,7 @@ public class StructuresTest {
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.println(matrix[i][j] + " ");
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
@@ -143,19 +144,20 @@ public class StructuresTest {
         System.out.println();
 
         // 10.
+        //Fix
         var totalMath = 0.0;
         var totalLanguage = 0.0;
         var totalScience = 0.0;
         var math = new ArrayList<Double>(Arrays.asList(6.7, 7.0, 6.5));
         var language = new ArrayList<Double>(Arrays.asList(6.0, 5.9, 6.9));
         var science = new ArrayList<Double>(Arrays.asList(7.0, 6.0, 5.0));
-        var subjectMatter = new HashMap<String, ArrayList>(Map.of(
+        var subjectMatter = new HashMap<String, ArrayList<Double>>(Map.of(
             "Lenguaje", language,
             "Matematicas", math,
             "Ciencias", science
         ));
 
-        for (Map.Entry<String, ArrayList> grades: subjectMatter.entrySet()) {
+        for (Map.Entry<String, ArrayList<Double>> grades: subjectMatter.entrySet()) {
             System.out.println("Materia: " + grades.getKey() + " | Notas: " + grades.getValue());
         }
         System.out.println();
