@@ -40,4 +40,9 @@ public class Arrays {
         System.out.println(booleans[4]);
         
     }
+
+    public static void sort(char[] array1) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'sort'");
+    }
 }

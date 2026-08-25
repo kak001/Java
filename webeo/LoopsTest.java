@@ -18,16 +18,13 @@ public class LoopsTest {
 
         // 2.
         // Usa while para calcular la tabla de multiplicar de un número ingresado por el usuario (1 al 10).
+        // Fix
         var number = 5;
         var i = 1;
-        while (true) {
-            if (i != 11) {
-                var totalNumber = number*i;
-                i++;
-                System.out.println(number + " Multiplicado por " + i + " : " + totalNumber);
-            } else {
-                break;
-            }
+        while ( i <= 10) {
+            var totalNumber = number * i;
+            System.out.println(number + " Multplicado por " + i + " : " + totalNumber);
+            i++;
         }
         System.out.println();
 
@@ -78,7 +75,7 @@ public class LoopsTest {
 
             totalNumbers += numberA;
 
-            System.out.println("Numero " + numberA + " ingrasado, total: " + totalNumbers);
+            System.out.println("Numero " + numberA + " ingresado, total: " + totalNumbers);
         } while (numberA != 0);
         teclado.close();
 
