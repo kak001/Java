@@ -72,4 +72,16 @@ public class Animal {
             System.out.println("Meow!");
         }
     }
+
+    public static void main(String[] args) {
+        var dog = new Dog("Rex", 2, "Husky Siberiano");
+
+        dog.doSound();
+        System.out.println();
+
+        var cat = new Cat("Arenita", 6, "Calico");
+
+        cat.doSound();
+        System.out.println();
+    }
 }
