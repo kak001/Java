@@ -4,10 +4,14 @@ public class AccessModifiers {
         // Encapsulamiento (modificadores de acceso)
 
         // Modificadores de acceso
-        // public
-        // private
-        // protected
-        // (default)
+        // public se puede acceder desde CUALQUIER parte del programa
+        // private se puede acceder SOLO desde dentro de la clase
+        // protected  se puede acceder SOLO desde la misma clase y subclases
+        // (default) se puede acceder SOLO desde el mismo paquete
+        
+        // getters
+        // setters
+        // diferentes metodos/funciones que creamos para poder permitir un acceso a la variable en cuestion cual se limita o restringe
 
         
     }
