@@ -46,6 +46,26 @@ public class InheritanceEjercicios {
 
         var rectangle = new Rectangle(3, 5);
         System.out.println("El area de un rectangulo ancho 3 y altura 5 es: " + rectangle.calculateArea() + " cm^2.");
+        System.out.println();
+
+        // 6.
+        var bird = new Bird("Paloma");
+        bird.fly();
+
+        var eagle = new Eagle("Aguila calva");
+        eagle.fly();
+        System.out.println();
+
+        // 7.
+        var device = new Device();
+        var phone = new Phone();
+        // Ignorar
+        System.out.println(device);
+        System.out.println(phone);
+        System.out.println();
+
+        // 8.
+
     }
 
     // 1. Crea una clase Vehicle con un método move(). Luego crea una subclase Car que herede de Vehicle y agrega el método honk().
@@ -267,5 +287,107 @@ public class InheritanceEjercicios {
         public double calculateArea() {
             return width * height;
         }
+    }
+    
+    // 6. Crea una clase Bird con el método fly(). Luego crea Eagle que sobrescriba fly() pero también llame al método original con super.fly().
+    // Super class
+    public static class Bird {
+        private String name;
+
+        public Bird(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void fly() {
+            System.out.println("El ave " + name + " esta volando.");
+        }
+    }
+
+    // Sub class
+    public static class Eagle extends Bird {
+        public Eagle(String name) {
+            super(name);
+        }
+
+        @Override
+        public void fly() {
+            super.fly();
+            System.out.println("El aguila esta volando muy rapido y alto.");
+        }
+    }
+    
+    // 7. Haz una clase Device con un constructor que imprima “Device created”. Luego crea Phone que herede de Device y en su constructor imprima “Phone ready”.
+    // Super class
+    public static class Device {
+        public Device() {
+            System.out.println("Device created");
+        }   
+    }
+
+    // Sub class
+    public static class Phone extends Device {
+        public Phone() {
+            System.out.println("Phone ready");
+        }
+    }
+
+    // 8. Account tiene un saldo y métodos para deposit() y withdraw(). SavingsAccount hereda y agrega un método addInterest().
+    // Super class
+    public static class Account {
+        private double balance;
+        private double deposit;
+        private double withdraw;
+
+        public Account(double balance) {
+            this.balance = balance;
+        }
+
+        public double getBalance() {
+            return balance;
+        }
+
+        public void setDeposit(double deposit) {
+            this.deposit = deposit;
+        }
+
+        public void setWithdraw(double withdraw) {
+            this.withdraw = withdraw;
+        }
+
+        public void showBalance() {
+            System.out.println("Tu balance actual es: " + balance);
+        }
+
+        public void deposit() {
+            if (deposit <= 0) {
+                System.out.println("Deposito no valido, ingresa un monto mayor a 0");
+            }
+        }
+
+        public void withdraw() {
+            if (withdraw > balance) {
+                System.out.println("Retiro no valido, no hay fondos suficientes."); 
+            } else {
+                balance -= withdraw;
+            }
+        }
+    }
+
+    // Sub class
+    public static class SavingsAccount extends Account {
+        double addInterest;
+
+        public SavingsAccount(double balance) {
+            super(balance);
+        }
+        
     }
 }
