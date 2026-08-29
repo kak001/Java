@@ -1,3 +1,5 @@
+import java.util.Collection;
+
 public class Arrays {
     public static void main(String[] args) {
         
@@ -39,5 +41,10 @@ public class Arrays {
         boolean[] booleans = new boolean[5];
         System.out.println(booleans[4]);
         
+    }
+
+    public static Collection<? extends PolymorphismEjercicios.Animal> asList() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'asList'");
     }
 }
