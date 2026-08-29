@@ -65,7 +65,38 @@ public class InheritanceEjercicios {
         System.out.println();
 
         // 8.
+        var account = new SavingsAccount(10000, 0.05);
+        account.deposit(5000);
+        account.withdraw(7000);
+        account.addInterest();
+        System.out.println();
 
+        // 9.
+        var anotherVehicle = new AnotherVehicle("Volkswagen", "Golf GTI", 2026);
+        anotherVehicle.describe();
+
+        var anotherCar = new AnotherCar("Porsche", "911 Carrera RS 2.7", 1972);
+        anotherCar.describe();
+
+        var bike = new Bike("Kawasaki", "Ninja ZX-6R", 2026);
+        bike.describe();
+
+        var truck = new Truck("Volvo", "FH 16 Aero 780", 2026);
+        truck.describe();
+        System.out.println();
+
+        // 10.
+        var anotherAnimal = new AnotherAnimal("Leon");
+        anotherAnimal.makeSound();
+
+        var anotherDog = new AnotherDog("Max");
+        anotherDog.makeSound();
+
+        var anotherCat = new AnotherCat("Happy");
+        anotherCat.makeSound();
+
+        var anotherBird = new AnotherBird("Pio");
+        anotherBird.makeSound();
     }
 
     // 1. Crea una clase Vehicle con un método move(). Luego crea una subclase Car que herede de Vehicle y agrega el método honk().
@@ -342,52 +373,177 @@ public class InheritanceEjercicios {
     // 8. Account tiene un saldo y métodos para deposit() y withdraw(). SavingsAccount hereda y agrega un método addInterest().
     // Super class
     public static class Account {
-        private double balance;
-        private double deposit;
-        private double withdraw;
+        protected double balance;
 
         public Account(double balance) {
             this.balance = balance;
         }
 
+        public void deposit(double amount) {
+            if (amount <= 0) {
+                System.out.println("Operacion invalida, el monto a depositar debe ser positivo");
+                return;
+            }
+            balance += amount;
+            System.out.println("Deposito hecho con exito");
+        }
+
+        public void withdraw(double amount) {
+            if (amount <= 0) {
+                System.out.println("Operacion invalida, el monto a retirar debe positivo");
+                return;
+            }
+            if (amount > balance) {
+                System.out.println("Fondos insuficientes");
+                return;
+            }
+            balance -= amount;
+            System.out.println("Retiro hecho con exito");
+        }
+
         public double getBalance() {
             return balance;
-        }
-
-        public void setDeposit(double deposit) {
-            this.deposit = deposit;
-        }
-
-        public void setWithdraw(double withdraw) {
-            this.withdraw = withdraw;
-        }
-
-        public void showBalance() {
-            System.out.println("Tu balance actual es: " + balance);
-        }
-
-        public void deposit() {
-            if (deposit <= 0) {
-                System.out.println("Deposito no valido, ingresa un monto mayor a 0");
-            }
-        }
-
-        public void withdraw() {
-            if (withdraw > balance) {
-                System.out.println("Retiro no valido, no hay fondos suficientes."); 
-            } else {
-                balance -= withdraw;
-            }
         }
     }
 
     // Sub class
     public static class SavingsAccount extends Account {
-        double addInterest;
+        private double interestRate;
 
-        public SavingsAccount(double balance) {
+        public SavingsAccount(double balance, double interestRate) {
             super(balance);
+            this.interestRate = interestRate;
         }
-        
+
+        public void addInterest() {
+            double interest = balance * interestRate;
+            System.out.println("Interes agregado: $" + interest + ", nuevo saldo: $" + balance);
+        }
+    }
+    
+    // 9. Crea una clase Vehicle y tres subclases: Car, Bike y Truck, cada una con un método describe() sobrescrito.
+    // Super class
+    public static class AnotherVehicle {
+        private String brand;
+        private String model;
+        private int year;
+
+        public AnotherVehicle(String brand, String model, int year) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+        }
+
+        public String getBrand() {return brand;}
+        public String getModel() {return model;}
+        public int getYear() {return year;}
+
+        public void setBrand(String brand) {this.brand = brand;}
+        public void setModel(String model) {this.model = model;}
+        public void setYear(int year) {this.year = year;}
+
+        public void describe() {
+            System.out.println("=========================");
+            System.out.println("DATOS DEL VEHICULO");
+            System.out.println("Marca: " + brand);
+            System.out.println("Model: " + model);
+            System.out.println("Año: " + year);
+            System.out.println("=========================");
+        }
+    }
+
+    // Sub class
+    public static class AnotherCar extends AnotherVehicle {
+        public AnotherCar(String brand, String model, int year) {
+            super(brand, model, year);
+        }
+
+        @Override
+        public void describe() {
+            System.out.println("=========================");
+            System.out.println("DATOS DEL AUTOMOVIL");
+            System.out.println("Marca: " + getBrand());
+            System.out.println("Model: " + getModel());
+            System.out.println("Año: " + getYear());
+            System.out.println("=========================");
+        }
+    }
+
+    public static class Bike extends AnotherCar {
+        public Bike(String brand, String model, int year) {
+            super(brand, model, year);
+        }
+
+        @Override
+        public void describe() {
+            System.out.println("=========================");
+            System.out.println("DATOS DE LA MOTOCICLETA");
+            System.out.println("Marca: " + getBrand());
+            System.out.println("Model: " + getModel());
+            System.out.println("Año: " + getYear());
+            System.out.println("=========================");
+        }
+    }
+
+    public static class Truck extends AnotherVehicle {
+        public Truck(String brand, String model, int year) {
+            super(brand, model, year);
+        }
+
+        @Override
+        public void describe() {
+            System.out.println("=========================");
+            System.out.println("DATOS DEL CAMION");
+            System.out.println("Marca: " + getBrand());
+            System.out.println("Model: " + getModel());
+            System.out.println("Año: " + getYear());
+            System.out.println("=========================");
+        }
+    }
+    
+    // 10. Crea un ArrayList<Animal> que contenga instancias de Dog, Cat y Bird. Recorre la lista y llama a makeSound().
+    //Super class
+    public static class AnotherAnimal {
+        private String name;
+
+        public AnotherAnimal(String name) {
+            this.name = name;
+        }
+
+        public String getName() {return name;}
+
+        public void setName(String name) {this.name = name;}
+
+        public void makeSound() {
+            System.out.println("El animal " + name + " esta haciendo un sonido propio generico");
+        }
+    }
+
+    // Sub classes
+    public static class AnotherDog extends AnotherAnimal {
+        public AnotherDog(String name) {super(name);}
+
+        @Override
+        public void makeSound() {
+            System.out.println("El perro " + getName() + " esta ladrando: ¡Woof!");
+        }
+    }
+
+    public static class AnotherCat extends AnotherAnimal {
+        public AnotherCat(String name) {super(name);}
+
+        @Override
+        public void makeSound() {
+            System.out.println("El gato " + getName() + " esta maullando: ¡Meow!");
+        }
+    }
+
+    public static class AnotherBird extends AnotherAnimal {
+        public AnotherBird(String name) {super(name);}
+
+        @Override
+        public void makeSound() {
+            System.out.println("El pajaro " + getName() + " esta cantando: ¡Pio pio!");
+        }
     }
 }
