@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class InheritanceEjercicios {
     public static void main(String[] args) {
 
@@ -86,17 +88,14 @@ public class InheritanceEjercicios {
         System.out.println();
 
         // 10.
-        var anotherAnimal = new AnotherAnimal("Leon");
-        anotherAnimal.makeSound();
+        ArrayList<AnotherAnimal> animals = new ArrayList<>();
+        animals.add(new AnotherDog("Max"));
+        animals.add(new AnotherCat("Happy"));
+        animals.add(new AnotherBird("Pio"));
 
-        var anotherDog = new AnotherDog("Max");
-        anotherDog.makeSound();
-
-        var anotherCat = new AnotherCat("Happy");
-        anotherCat.makeSound();
-
-        var anotherBird = new AnotherBird("Pio");
-        anotherBird.makeSound();
+        for (AnotherAnimal a : animals) {
+            a.makeSound();
+        }
     }
 
     // 1. Crea una clase Vehicle con un método move(). Luego crea una subclase Car que herede de Vehicle y agrega el método honk().
@@ -469,7 +468,7 @@ public class InheritanceEjercicios {
         }
     }
 
-    public static class Bike extends AnotherCar {
+    public static class Bike extends AnotherVehicle {
         public Bike(String brand, String model, int year) {
             super(brand, model, year);
         }
