@@ -48,6 +48,20 @@ public class PolymorphismEjercicios {
         System.out.println();
 
         // 5.
+        var vehicle = new Vehicle();
+        vehicle.start();
+
+        var vehicles = new ArrayList<Vehicle>();
+        vehicles.add(new Car());
+        vehicles.add(new Bike());
+        vehicles.add(new Truck());
+
+        for (Vehicle vehicle2: vehicles) {
+            vehicle2.start();
+        }
+        System.out.println();
+
+        // 6
     }
     
     // 1. Crea una clase Animal con el método makeSound(). Luego crea subclases Dog, Cat y Cow que sobrescriban ese método con sonidos diferentes. Llama al método desde una lista de Animal.
@@ -147,4 +161,34 @@ public class PolymorphismEjercicios {
             return "Hello, " + name;
         } 
     }
+    
+    // 5. Crea una clase Vehicle con un método start(). Luego crea Car, Bike y Truck que sobrescriban ese método. Recorre una lista ArrayList<Vehicle> para llamar a start() en cada uno.
+    public static class Vehicle {
+        public void start() {
+            System.out.println("El vehiculo esta arrancando");
+        }
+    }
+
+    public static class Car extends Vehicle {
+        @Override
+        public void start() {
+            System.out.println("El automovil esta arrancando");
+        }
+    }
+
+    public static class Bike extends Vehicle {
+        @Override
+        public void start() {
+            System.out.println("La motocicleta esta arrancando");
+        }
+    }
+
+    public static class Truck extends Vehicle {
+        @Override
+        public void start() {
+            System.err.println("El camiendo esta arrancando");
+        }
+    }
+
+    // 6. Crea una clase Notification con método send(), y subclases EmailNotification, SMSNotification. Luego crea una función sendNotification(Notification n) que reciba cualquier tipo y lo ejecute.
 }
