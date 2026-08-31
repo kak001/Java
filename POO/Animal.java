@@ -1,87 +1,54 @@
 public class Animal {
-
-    // Atributos
-    private String names;
+    private String name;
     private int age;
-    private String species;
+    private double weight;
 
-    // Constructor
-    public Animal(String name, int age, String species) {
-        this.names = name;
+    public Animal() {
+        this.name = "Desconocido";
+        this.age = 0;
+        this.weight = 0;
+    }
+
+    public Animal(String name, int age, double weight) {
+        this.name = name;
         this.age = age;
-        this.species = species;
+        this.weight = weight;
     }
 
-    // Metodos
-     public void showAnimalInfo() {
-        System.out.println("Datos del animal");
-        System.out.println("Nombre del animal: " + names);
-        System.out.println("Edad del animal: " + age);
-        System.out.println("Raza del animal: " + species);
-    }
-
-    public void doSound() {
-        System.out.println(names + " Esta haciendo un sonido generico");
-    }
-
-    // Getters
     public String getName() {
-        return names;
+        return name;
     }
 
     public int getAge() {
         return age;
     }
 
-    public String getSpecies() {
-        return species;
+    public double getWeight() {
+        return weight;
     }
 
-    // Setters
-    public void setName(String names) {
-        this.names = names;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public void setSpecies(String species) {
-        this.species = species;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    // Clase hija: Perro
-    public static class Dog extends Animal {
-        public Dog(String names, int age, String species) {
-            super(names, age, species);
-        }
-
-        @Override
-        public void doSound() {
-            System.out.println("Woof!");
-        }
+    public void info() {
+        System.out.println("========================");
+        System.out.println("DATOS DEL ANIMAL GENERICO");
+        System.out.println("Nombre: " + name);
+        System.out.println("Edad: " + age);
+        System.out.println("Peso (Kg): " + weight);
+        System.out.println("========================");
     }
 
-    // Clase hija: Gato
-    public static class Cat extends Animal {
-        public Cat(String names, int age, String species) {
-            super(names, age, species);
-        }
-        @Override
-        public void doSound() {
-            System.out.println("Meow!");
-        }
-    }
-
-    public static void main(String[] args) {
-        var dog = new Dog("Rex", 2, "Husky Siberiano");
-
-        dog.doSound();
-        System.out.println();
-
-        var cat = new Cat("Arenita", 6, "Calico");
-
-        cat.doSound();
-        System.out.println();
+    public void sound() {
+        System.out.println("El animal esta haciendo un sonido generico.");
     }
 }
